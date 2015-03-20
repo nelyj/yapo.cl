@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mis publicaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.price %></td>
+        <td><%= publication.titulo %></td>
+        <td><%= publication.descripcion %></td>
+        <td><%= link_to 'Show', publication %></td>
+        <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication', new_publication_path %>

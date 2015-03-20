@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+HOlA
+<p>
+  <strong>Price:</strong>
+  <%= @publication.price %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @publication.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @publication.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>
